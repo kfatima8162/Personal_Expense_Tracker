@@ -6,6 +6,37 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <title>Income and Expense Tracker</title>
+
+<h2>Income Entry</h2>
+
+<form>
+    <label>Source Name:</label>
+    <input type="text" name="source_name" placeholder="Enter income source"><br><br>
+
+    <label>Amount:</label>
+    <input type="number" name="income_amount" placeholder="Enter amount"><br><br>
+
+    <input type="submit" value="Add Income">
+    <input type="submit" value="View All Income">
+</form>
+<h2>Expense Entry</h2>
+
+<form>
+    <label>Expense Category:</label>
+    <select name="category">
+        <option value="food">Food</option>
+        <option value="travel">Travel</option>
+        <option value="bills">Bills</option>
+        <option value="savings">Savings</option>
+        <option value="shopping">Shopping</option>
+    </select><br><br>
+
+    <label>Amount:</label>
+    <input type="number" name="expense_amount" placeholder="Enter amount"><br><br>
+    <input type="submit" value="Add Expense">
+    <input type="submit" value="View All Expense">
+
+</form>
 </body>
 </html>

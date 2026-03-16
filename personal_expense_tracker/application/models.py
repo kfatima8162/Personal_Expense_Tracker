@@ -3,10 +3,14 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Expense(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    description = models.CharField(max_length=255)# categorizes expense
     amount = models.DecimalField(max_digits=10,decimal_places=2)
     date = models.DateField()
-
+    class expense_category(models.TextChoices):
+        FOOD = 'FOOD'
+        TRAVEL = 'TRAVEL'
+        BILLS = 'BILLS'
+        SAVINGS = 'SAVINGS'
+        SHOPPING = 'SHOPPING'
     def __str__(self):
         return self.description
     
